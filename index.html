@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades - 2do "B" Magister</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Actividades - 2do "B"</h1>
+            <p>2do "B" Magister - Reporte Financiero</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="openTab(event, 'resumen')">📊 Resumen</button>
+            <button class="tab" onclick="openTab(event, 'estudiantes')">👥 Por Estudiante</button>
+            <button class="tab" onclick="openTab(event, 'gastos')">💰 Detalle de Gastos</button>
+            <button class="tab" onclick="openTab(event, 'vouchers')">🧾 Vouchers</button>
+        </div>
+
+        <div class="content">
+            <!-- Resumen Tab -->
+            <div id="resumen" class="tab-content active">
+                <div class="summary-cards">
+                    <div class="card">
+                        <h3>21</h3>
+                        <p>Estudiantes</p>
+                    </div>
+                    <div class="card">
+                        <h3>S/ 747</h3>
+                        <p>Total Recaudado</p>
+                    </div>
+                    <div class="card">
+                        <h3>2</h3>
+                        <p>Actividades</p>
+                    </div>
+                    <div class="card">
+                        <h3>98.1%</h3>
+                        <p>Participación</p>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Actividad</th>
+                                <th>Costo Individual</th>
+                                <th>Total Recaudado</th>
+                                <th>Participantes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Canasta Día de la Madre</td>
+                                <td class="amount">S/ 7.00</td>
+                                <td class="amount">S/ 147.00</td>
+                                <td>21/21</td>
+                            </tr>
+                            <tr>
+                                <td>Regalo Día de la Madre Miss</td>
+                                <td class="amount">S/ 5.00</td>
+                                <td class="amount">S/ 105.00</td>
+                                <td>21/21</td>
+                            </tr>
+                            <tr>
+                                <td>Canasta Día del Padre</td>
+                                <td class="amount">S/ 7.00</td>
+                                <td class="amount">S/ 147.00</td>
+                                <td>21/21</td>
+                            </tr>
+                            <tr>
+                                <td>Confección de Aro</td>
+                                <td class="amount">S/ 3.00</td>
+                                <td class="amount">S/ 63.00</td>
+                                <td>21/21</td>
+                            </tr>
+                            <tr>
+                                <td>Actividad Día del Padre</td>
+                                <td class="amount">S/ 15.00</td>
+                                <td class="amount">S/ 285.00</td>
+                                <td>19/21</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Agregar el resumen dinámico aquí -->
+                <div id="summary"></div>
+            </div>
+
+            <!-- Gastos Tab -->
+            <div id="gastos" class="tab-content">
+                <h2 style="margin-bottom: 30px; color: #343a40;">💰 Detalle de Gastos por Actividad</h2>
+                
+                <!-- Canasta Día de la Madre -->
+                <div class="expense-section">
+                    <h3 class="expense-title">🧺 CANASTA DEL DIA DE LA MADRE</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Descripción del Gasto</th>
+                                    <th>N° de Boleta</th>
+                                    <th>Cant.</th>
+                                    <th>P.U (S/)</th>
+                                    <th>Total (S/)</th>
+                                    <th>Lugar de Compra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3/05/2025</td>
+                                    <td>CESTO</td>
+                                    <td>B002-217.58</td>
+                                    <td>1</td>
+                                    <td class="amount">14.00</td>
+                                    <td class="amount">14.00</td>
+                                    <td>MAUTINO</td>
+                                </tr>
+                                <tr>
+                                    <td>3/05/2025</td>
+                                    <td>PAPEL CELOFÁN</td>
+                                    <td>GB-05404</td>
+                                    <td>3</td>
+                                    <td class="amount">1.00</td>
+                                    <td class="amount">3.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>3/05/2025</td>
+                                    <td>PRODUCTOS</td>
+                                    <td>BE03-0114473S</td>
+                                    <td>1</td>
+                                    <td class="amount">100.50</td>
+                                    <td class="amount">100.50</td>
+                                    <td>MASS</td>
+                                </tr>
+                                <tr>
+                                    <td>7/05/2025</td>
+                                    <td>GLOBO</td>
+                                    <td>NV-000752</td>
+                                    <td>1</td>
+                                    <td class="amount">4.00</td>
+                                    <td class="amount">4.00</td>
+                                    <td>D CABA</td>
+                                </tr>
+                                <tr>
+                                    <td>7/05/2025</td>
+                                    <td>PRODUCTOS</td>
+                                    <td>B659-00077723</td>
+                                    <td>1</td>
+                                    <td class="amount">21.87</td>
+                                    <td class="amount">21.87</td>
+                                    <td>TAMBO</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="5"><strong>TOTAL GASTOS</strong></td>
+                                    <td class="amount"><strong>143.37</strong></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="summary-box">
+                        <div class="summary-item">
+                            <span>💰 MONTO RECAUDADO:</span>
+                            <span class="amount">S/ 147.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💸 GASTO TOTAL:</span>
+                            <span class="amount">S/ 143.37</span>
+                        </div>
+                        <div class="summary-item balance">
+                            <span>💵 SALDO:</span>
+                            <span class="amount">S/ 3.63</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regalo Día de la Madre Miss Elizabeth -->
+                <div class="expense-section">
+                    <h3 class="expense-title">🎁 REGALO DEL DIA DE LA MADRE - MISS ELIZABETH</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Descripción del Gasto</th>
+                                    <th>N° de Boleta</th>
+                                    <th>Cant.</th>
+                                    <th>P.U (S/)</th>
+                                    <th>Total (S/)</th>
+                                    <th>Lugar de Compra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>27/04/2025</td>
+                                    <td>CARTERA</td>
+                                    <td>T2-08137-0071634</td>
+                                    <td>1</td>
+                                    <td class="amount">84.90</td>
+                                    <td class="amount">84.90</td>
+                                    <td>PLATANITOS</td>
+                                </tr>
+                                <tr>
+                                    <td>7/05/2025</td>
+                                    <td>BOMBARDAS</td>
+                                    <td></td>
+                                    <td>2</td>
+                                    <td class="amount">7.00</td>
+                                    <td class="amount">14.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>7/05/2025</td>
+                                    <td>PUBLIGLOBO</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">1.00</td>
+                                    <td class="amount">1.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>6/05/2025</td>
+                                    <td>MOÑO</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">2.00</td>
+                                    <td class="amount">2.00</td>
+                                    <td>NAYSHA</td>
+                                </tr>
+                                <tr>
+                                    <td>6/05/2025</td>
+                                    <td>BOLSO DE REGALO</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">5.50</td>
+                                    <td class="amount">5.50</td>
+                                    <td>NAYSHA</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="5"><strong>TOTAL GASTOS</strong></td>
+                                    <td class="amount"><strong>107.40</strong></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="summary-box">
+                         <div class="summary-item">
+                            <span>💰 SALDO ANTERIOR:</span>
+                            <span class="amount">S/ 3.63</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💰 MONTO RECAUDADO:</span>
+                            <span class="amount">S/ 105.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💸 GASTO TOTAL:</span>
+                            <span class="amount">S/ 107.40</span>
+                        </div>
+                        <div class="summary-item balance">
+                            <span>⚠️ SALDO TOTAL FINAL:</span>
+                            <span class="amount">S/ 1.23 </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confección de Aro -->
+<div class="expense-section">
+    <h3 class="expense-title">🧶 CONFECCIÓN DE ARO</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Descripción del Gasto</th>
+                    <th>N° de Boleta</th>
+                    <th>Cant.</th>
+                    <th>P.U (S/)</th>
+                    <th>Total (S/)</th>
+                    <th>Lugar de Compra</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12/06/2025</td>
+                    <td>Materiales y mano de obra</td>
+                    <td></td>
+                    <td>1</td>
+                    <td class="amount">42.00</td>
+                    <td class="amount">42.00</td>
+                    <td>Mama de Brianna</td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="5"><strong>TOTAL GASTOS</strong></td>
+                    <td class="amount"><strong>42.00</strong></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="summary-box">
+         <div class="summary-item">
+            <span>💰 SALDO ANTERIOR:</span>
+            <span class="amount">S/ 1.23</span>
+        </div>
+        <div class="summary-item">
+            <span>💰 MONTO RECAUDADO:</span>
+            <span class="amount">S/ 63.00</span>
+        </div>
+        <div class="summary-item">
+            <span>💸 GASTO TOTAL:</span>
+            <span class="amount">S/ 42.00</span>
+        </div>
+        <div class="summary-item balance">
+            <span>💵 SALDO:</span>
+            <span class="amount">S/ 22.23</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="expense-section">
+                    <h3 class="expense-title">🧺 CANASTA DEL DIA DEl PADRE</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Descripción del Gasto</th>
+                                    <th>N° de Boleta</th>
+                                    <th>Cant.</th>
+                                    <th>P.U (S/)</th>
+                                    <th>Total (S/)</th>
+                                    <th>Lugar de Compra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12/06/2025</td>
+                                    <td>BILLETERA</td>
+                                    <td>B002-100119</td>
+                                    <td>1</td>
+                                    <td class="amount">26.9</td>
+                                    <td class="amount">26.9</td>
+                                    <td>ANDALY</td>
+                                </tr>
+                                <tr>
+                                    <td>12/06/2025</td>
+                                    <td>GLOBO AZUL</td>
+                                    <td>NV-174</td>
+                                    <td>1</td>
+                                    <td class="amount">1.00</td>
+                                    <td class="amount">1.00</td>
+                                    <td>OSCAR</td>
+                                </tr>
+                                   <tr>
+                                    <td>12/06/2025</td>
+                                    <td>BIRUTA</td>
+                                    <td>NV-174</td>
+                                    <td>1</td>
+                                    <td class="amount">2.00</td>
+                                    <td class="amount">2.00</td>
+                                    <td>OSCAR</td>
+                                </tr>
+                                   <tr>
+                                    <td>12/06/2025</td>
+                                    <td>GLOBO BURBUJA</td>
+                                    <td>NV-174</td>
+                                    <td>1</td>
+                                    <td class="amount">2.00</td>
+                                    <td class="amount">2.00</td>
+                                    <td>OSCAR</td>
+                                </tr>
+                                   <tr>
+                                    <td>12/06/2025</td>
+                                    <td>LETRERO</td>
+                                    <td>NV-174</td>
+                                    <td>1</td>
+                                    <td class="amount">3.00</td>
+                                    <td class="amount">3.00</td>
+                                    <td>OSCAR</td>
+                                </tr>
+                                   <tr>
+                                    <td>12/06/2025</td>
+                                    <td>CAJA</td>
+                                    <td>NV-174</td>
+                                    <td>1</td>
+                                    <td class="amount">7.00</td>
+                                    <td class="amount">7.00</td>
+                                    <td>OSCAR</td>
+                                </tr>
+                                   <tr>
+                                    <td>12/06/2025</td>
+                                    <td>PALITO</td>
+                                    <td>NV-174</td>
+                                    <td>1</td>
+                                    <td class="amount">1.00</td>
+                                    <td class="amount">1.00</td>
+                                    <td>OSCAR</td>
+                                </tr>
+                                <tr>
+                                    <td>12/06/2025</td>
+                                    <td>CINTA DE AGUA</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">3.00</td>
+                                    <td class="amount">3.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>13/06/2025</td>
+                                    <td>LOCION-TALCO</td>
+                                    <td>B093-534439</td>
+                                    <td>1</td>
+                                    <td class="amount">22.18</td>
+                                    <td class="amount">22.18</td>
+                                    <td>BOTICAS PERU</td>
+                                </tr>
+                                <tr>
+                                    <td>13/06/2025</td>
+                                    <td>DESODORANTE</td>
+                                    <td>B008-303171</td>
+                                    <td>1</td>
+                                    <td class="amount">11.90</td>
+                                    <td class="amount">11.90</td>
+                                    <td>FARMADESA</td>
+                                </tr>
+                                 <tr>
+                                    <td>13/06/2025</td>
+                                    <td>JABON-AFEITADOR</td>
+                                    <td>B234-201179</td>
+                                    <td>1</td>
+                                    <td class="amount">27.65</td>
+                                    <td class="amount">27.65</td>
+                                    <td>BOTICAS PERU</td>
+                                </tr>
+                                 <tr>
+                                    <td>13/06/2025</td>
+                                    <td>CAJA TRUPAL</td>
+                                    <td>GR-9239</td>
+                                    <td>1</td>
+                                    <td class="amount">8.00</td>
+                                    <td class="amount">8.00</td>
+                                    <td>YAPE-404</td>
+                                </tr>
+                                 <tr>
+                                    <td>13/06/2025</td>
+                                    <td>TAQUIS</td>
+                                    <td>GR-153</td>
+                                    <td>1</td>
+                                    <td class="amount">4.00</td>
+                                    <td class="amount">4.00</td>
+                                    <td>LA TRANQUERA</td>
+                                </tr>
+                                 <tr>
+                                    <td>13/06/2025</td>
+                                    <td>PIQUEO</td>
+                                    <td>GR-153</td>
+                                    <td>1</td>
+                                    <td class="amount">2.00</td>
+                                    <td class="amount">2.00</td>
+                                    <td>LA TRANQUERA</td>
+                                </tr>
+                                 <tr>
+                                    <td>13/06/2025</td>
+                                    <td>CERVEZA</td>
+                                    <td>GR-153</td>
+                                    <td>2</td>
+                                    <td class="amount">5.00</td>
+                                    <td class="amount">10.00</td>
+                                    <td>LA TRANQUERA</td>
+                                </tr>
+                                 <tr>
+                                    <td>13/06/2025</td>
+                                    <td>PAPEL SEDA</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">3.00</td>
+                                    <td class="amount">3.00</td>
+                                    <td>YAPE-294</td>
+                                </tr>
+                                 <tr>
+                                    <td>13/06/2025</td>
+                                    <td>CARTELES CHICOS</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">2.00</td>
+                                    <td class="amount">2.00</td>
+                                    <td>YAPE-973</td>
+                                </tr>
+                                   <tr>
+                                    <td>13/06/2025</td>
+                                    <td>BOLSA, GLOBOS PENCIL</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">10.00</td>
+                                    <td class="amount">10.00</td>
+                                    <td>YAPE-745</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="5"><strong>TOTAL GASTOS</strong></td>
+                                    <td class="amount"><strong>146.63</strong></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="summary-box">
+                         <div class="summary-item">
+                          <span>💰 SALDO ANTERIOR:</span>
+                          <span class="amount">S/ 22.23</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💰 MONTO RECAUDADO:</span>
+                            <span class="amount">S/ 147.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💸 GASTO TOTAL:</span>
+                            <span class="amount">S/ 146.63</span>
+                        </div>
+                        <div class="summary-item balance">
+                            <span>💵 SALDO:</span>
+                            <span class="amount">S/ 22.60</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+<!-- Actividad Día del Padre -->
+<div class="expense-section">
+                    <h3 class="expense-title">🧺 COMIDA DIA DEL PADRE</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Descripción del Gasto</th>
+                                    <th>N° de Boleta</th>
+                                    <th>Cant.</th>
+                                    <th>P.U (S/)</th>
+                                    <th>Total (S/)</th>
+                                    <th>Lugar de Compra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>13/06/2025</td>
+                                    <td>PLATOS DESCARTABLES</td>
+                                    <td>GR-4970</td>
+                                    <td>3</td>
+                                    <td class="amount">9.00</td>
+                                    <td class="amount">27.00</td>
+                                    <td>YAPE-4715</td>
+                                </tr>
+                                <tr>
+                                    <td>13/06/2025</td>
+                                    <td>SERVILLETAS</td>
+                                    <td>GR-4970</td>
+                                    <td>1</td>
+                                    <td class="amount">1.50</td>
+                                    <td class="amount">1.50</td>
+                                    <td>YAPE-4715</td>
+                                </tr>
+                                   <tr>
+                                    <td>13/06/2025</td>
+                                    <td>TENEDORES</td>
+                                    <td>GR-4970</td>
+                                    <td>1</td>
+                                    <td class="amount">2.50</td>
+                                    <td class="amount">2.50</td>
+                                    <td>YAPE-4715</td>
+                                </tr>
+                                   <tr>
+                                    <td>13/06/2025</td>
+                                    <td>ARROZ</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">28.80</td>
+                                    <td class="amount">28.80</td>
+                                    <td>YAPE-591</td>
+                                </tr>
+                                   <tr>
+                                    <td>13/06/2025</td>
+                                    <td>NARANJA</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">3.00</td>
+                                    <td class="amount">3.00</td>
+                                    <td>YAPE-743</td>
+                                </tr>
+                                   <tr>
+                                    <td>13/06/2025</td>
+                                    <td>POLLO</td>
+                                    <td></td>
+                                    <td>7</td>
+                                    <td class="amount">26.00</td>
+                                    <td class="amount">182.00</td>
+                                    <td>YAPE-394</td>
+                                </tr>
+                                   <tr>
+                                    <td>13/06/2025</td>
+                                    <td>ADEREZO</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">9.00</td>
+                                    <td class="amount">9.00</td>
+                                    <td>YAPE-159</td>
+                                </tr>
+                                <tr>
+                                    <td>13/06/2025</td>
+                                    <td>ROCOTO, CEBOLLA</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">5.20</td>
+                                    <td class="amount">5.20</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>13/06/2025</td>
+                                    <td>QUESO, GALLETA, LECHE</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">11.00</td>
+                                    <td class="amount">11.00</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>13/06/2025</td>
+                                    <td>PAPA YUNGAY</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">11.00</td>
+                                    <td class="amount">11.00</td>
+                                    <td>YAPE-746</td>
+                                </tr>
+                                 <tr>
+                                    <td>13/06/2025</td>
+                                    <td>MANTEQUILLA</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">2.50</td>
+                                    <td class="amount">2.50</td>
+                                    <td></td>
+                                </tr>
+                                 
+                                <tr class="total-row">
+                                    <td colspan="5"><strong>TOTAL GASTOS</strong></td>
+                                    <td class="amount"><strong>283.50</strong></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="summary-box">
+                         <div class="summary-item">
+                          <span>💰 SALDO ANTERIOR:</span>
+                          <span class="amount">S/ 22.60</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💰 MONTO RECAUDADO:</span>
+                            <span class="amount">S/ 285.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💸 GASTO TOTAL:</span>
+                            <span class="amount">S/ 283.50</span>
+                        </div>
+                        <div class="summary-item balance">
+                            <span>💵 SALDO TOTAL FINAL:</span>
+                            <span class="amount">S/ 24.10</span>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Nota informativa -->
+                <div class="info-note">
+                    <h4>📝 Información Importante:</h4>
+                    <p>• Los gastos están respaldados con boletas y vouchers correspondientes</p>
+                    <p>• Todos los recibos están disponibles para revisión</p>
+                </div>
+            </div>
+
+            <!-- Estudiantes Tab -->
+            <div id="estudiantes" class="tab-content">
+                <h2 style="margin-bottom: 20px; color: #343a40;">👥 Detalle por Estudiante</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>Apellidos y Nombres</th>
+                                <th>Canasta Madre</th>
+                                <th>Regalo Miss</th>
+                                <th>Canasta Padre</th>
+                                <th>Aro</th>
+                                <th>Act. Padre</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody">
+                            <!-- Los datos se llenarán con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Vouchers Tab -->  
+         <div id="vouchers" class="tab-content">
+             <h3 class="expense-title">🧺 GASTOS DIA DE LA MADRE</h3>
+               <div class="voucher-grid" id="voucherGrid">
+                <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M1.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M2.jpg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M3.jpg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M4.jpg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M5.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M6.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M7.jpg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M8.jpg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+               </div>
+             <h3 class="expense-title">🧺 GASTOS DIA DEL PADRE</h3>
+            <div class="voucher-grid" id="voucherGrid">
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/1.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/2.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/3.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/5.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/6.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/7.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/8.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/9.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/10.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/11.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/12.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/13.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/14.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/15.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/16.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/17.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/18.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/19.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/20.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                     <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/21.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+           </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
