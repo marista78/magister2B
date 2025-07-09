@@ -1,29 +1,29 @@
-// Datos de estudiantes
+// Datos de estudiantes - AGREGAR SOLO diaMaestro
 const students = [
-    {no: 1, name: "Arista Atauchi, Jose Andre", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 2, name: "Bautista Hualpa Kate", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 0},
-    {no: 3, name: "Borjas Medina, Dereck", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 4, name: "Cajacuri Cardenas, Arlett", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 5, name: "Carita Chuquihuanga, Valeria", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 6, name: "Chile Suyco, Julián Enrique", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 7, name: "Fernández Alcantara, Fernando", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 8, name: "Gutierrez Inocente, Rodrigo", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 9, name: "Isique Vilcahuamán, Ana Dayanne", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 10, name: "Juárez Mondragón, Mia Shirley", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 11, name: "Manyari Vargas, Iker Miguel", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 12, name: "Mendoza Socualaya, Ezio Valentín", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 13, name: "Paico Céspedes, Jésus", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 0},
-    {no: 14, name: "Pedroza Muñoz, Rafaela Valentina", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 15, name: "Ramos Valdivia, Brianna", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 16, name: "Rivas Ramos Yamila Isel", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 17, name: "Sahuanay Moreno, Dayana", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 18, name: "Tapia Panebra, Renato", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 19, name: "Tejada Castillo, Emily", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 20, name: "Torres de la Cruz, Noah José", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15},
-    {no: 21, name: "Ycarrayme Rimarachin, Mikaela", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15}
+    {no: 1, name: "Arista Atauchi, Jose Andre", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 2, name: "Bautista Hualpa Kate", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 0, diaMaestro: 5},
+    {no: 3, name: "Borjas Medina, Dereck", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 4, name: "Cajacuri Cardenas, Arlett", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 5, name: "Carita Chuquihuanga, Valeria", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 6, name: "Chile Suyco, Julián Enrique", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 7, name: "Fernández Alcantara, Fernando", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 8, name: "Gutierrez Inocente, Rodrigo", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 9, name: "Isique Vilcahuamán, Ana Dayanne", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 10, name: "Juárez Mondragón, Mia Shirley", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 11, name: "Manyari Vargas, Iker Miguel", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 12, name: "Mendoza Socualaya, Ezio Valentín", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 13, name: "Paico Céspedes, Jésus", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 0, diaMaestro: 5},
+    {no: 14, name: "Pedroza Muñoz, Rafaela Valentina", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 15, name: "Ramos Valdivia, Brianna", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 16, name: "Rivas Ramos Yamila Isel", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 17, name: "Sahuanay Moreno, Dayana", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 18, name: "Tapia Panebra, Renato", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 19, name: "Tejada Castillo, Emily", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 20, name: "Torres de la Cruz, Noah José", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5},
+    {no: 21, name: "Ycarrayme Rimarachin, Mikaela", canastaMadre: 7, regaloMiss: 5, canastaPadre: 7, aro: 3, actPadre: 15, diaMaestro: 5}
 ];
 
-// Función para cambiar de pestaña (DEBE ESTAR FUERA Y SER GLOBAL)
+// Función para cambiar de pestaña (MANTENER IGUAL)
 function openTab(event, tabName) {
     // Ocultar todos los contenidos de pestañas
     const tabContents = document.getElementsByClassName('tab-content');
@@ -44,29 +44,45 @@ function openTab(event, tabName) {
     event.target.classList.add('active');
 }
 
-// Llenar tabla de estudiantes
+// NUEVA FUNCIÓN PARA LLENAR TABLA AGRUPADA
 function fillStudentTable() {
     const tbody = document.getElementById('studentTableBody');
-    if (!tbody) return; // Verificar que el elemento existe
+    if (!tbody) return;
     
-    let totalGeneral = 0;
-    let totalCanastaMadre = 0;
-    let totalRegaloMiss = 0;
-    let totalCanastaPadre = 0;
-    let totalAro = 0;
-    let totalActPadre = 0;
+    let totales = {
+        canastaMadre: 0,
+        regaloMiss: 0,
+        subtotalMadre: 0,
+        canastaPadre: 0,
+        aro: 0,
+        actPadre: 0,
+        subtotalPadre: 0,
+        diaMaestro: 0,
+        subtotalMaestro: 0,
+        totalGeneral: 0
+    };
 
     // Limpiar contenido previo
     tbody.innerHTML = '';
 
+    // Llenar datos de estudiantes
     students.forEach(student => {
-        const total = student.canastaMadre + student.regaloMiss + student.canastaPadre + student.aro + student.actPadre;
-        totalGeneral += total;
-        totalCanastaMadre += student.canastaMadre;
-        totalRegaloMiss += student.regaloMiss;
-        totalCanastaPadre += student.canastaPadre;
-        totalAro += student.aro;
-        totalActPadre += student.actPadre;
+        const subtotalMadre = student.canastaMadre + student.regaloMiss;
+        const subtotalPadre = student.canastaPadre + student.aro + student.actPadre;
+        const subtotalMaestro = student.diaMaestro;
+        const totalEstudiante = subtotalMadre + subtotalPadre + subtotalMaestro;
+
+        // Acumular totales
+        totales.canastaMadre += student.canastaMadre;
+        totales.regaloMiss += student.regaloMiss;
+        totales.subtotalMadre += subtotalMadre;
+        totales.canastaPadre += student.canastaPadre;
+        totales.aro += student.aro;
+        totales.actPadre += student.actPadre;
+        totales.subtotalPadre += subtotalPadre;
+        totales.diaMaestro += student.diaMaestro;
+        totales.subtotalMaestro += subtotalMaestro;
+        totales.totalGeneral += totalEstudiante;
 
         const row = `
             <tr>
@@ -74,10 +90,14 @@ function fillStudentTable() {
                 <td class="student-name">${student.name}</td>
                 <td class="amount">S/ ${student.canastaMadre.toFixed(2)}</td>
                 <td class="amount">S/ ${student.regaloMiss.toFixed(2)}</td>
+                <td class="amount" style="font-weight: bold;">S/ ${subtotalMadre.toFixed(2)}</td>
                 <td class="amount">S/ ${student.canastaPadre.toFixed(2)}</td>
                 <td class="amount">S/ ${student.aro.toFixed(2)}</td>
                 <td class="amount">S/ ${student.actPadre.toFixed(2)}</td>
-                <td class="amount">S/ ${total.toFixed(2)}</td>
+                <td class="amount" style="font-weight: bold;">S/ ${subtotalPadre.toFixed(2)}</td>
+                <td class="amount">S/ ${student.diaMaestro.toFixed(2)}</td>
+                <td class="amount" style="font-weight: bold;">S/ ${subtotalMaestro.toFixed(2)}</td>
+                <td class="amount" style="font-weight: bold;">S/ ${totalEstudiante.toFixed(2)}</td>
             </tr>
         `;
         tbody.innerHTML += row;
@@ -87,24 +107,28 @@ function fillStudentTable() {
     const totalRow = `
         <tr class="total-row">
             <td colspan="2"><strong>TOTALES</strong></td>
-            <td class="amount"><strong>S/ ${totalCanastaMadre.toFixed(2)}</strong></td>
-            <td class="amount"><strong>S/ ${totalRegaloMiss.toFixed(2)}</strong></td>
-            <td class="amount"><strong>S/ ${totalCanastaPadre.toFixed(2)}</strong></td>
-            <td class="amount"><strong>S/ ${totalAro.toFixed(2)}</strong></td>
-            <td class="amount"><strong>S/ ${totalActPadre.toFixed(2)}</strong></td>
-            <td class="amount"><strong>S/ ${totalGeneral.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.canastaMadre.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.regaloMiss.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.subtotalMadre.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.canastaPadre.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.aro.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.actPadre.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.subtotalPadre.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.diaMaestro.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.subtotalMaestro.toFixed(2)}</strong></td>
+            <td class="amount"><strong>S/ ${totales.totalGeneral.toFixed(2)}</strong></td>
         </tr>
     `;
     tbody.innerHTML += totalRow;
 
-    // Generar resumen
-    generateSummary(totalGeneral, totalCanastaMadre, totalRegaloMiss, totalCanastaPadre, totalAro, totalActPadre);
+    // Generar resumen (MANTENER IGUAL)
+    generateSummary(totales.totalGeneral, totales.canastaMadre, totales.regaloMiss, totales.canastaPadre, totales.aro, totales.actPadre);
 }
 
-// Generar resumen
+// Generar resumen (MANTENER IGUAL)
 function generateSummary(totalGeneral, totalCanastaMadre, totalRegaloMiss, totalCanastaPadre, totalAro, totalActPadre) {
     const summaryDiv = document.getElementById('summary');
-    if (!summaryDiv) return; // Verificar que el elemento existe
+    if (!summaryDiv) return;
     
     const studentsWithoutActPadre = students.filter(s => s.actPadre === 0);
     
@@ -117,7 +141,7 @@ function generateSummary(totalGeneral, totalCanastaMadre, totalRegaloMiss, total
     `;
 }
 
-// Función para manejar la subida de vouchers
+// Función para manejar la subida de vouchers (MANTENER IGUAL)
 function handleVoucherUpload() {
     const fileInput = document.getElementById('voucherUpload');
     if (!fileInput) return;
@@ -153,7 +177,7 @@ function handleVoucherUpload() {
     });
 }
 
-// Inicializar cuando se carga la página
+// Inicializar cuando se carga la página (MANTENER IGUAL)
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM cargado, inicializando...');
     fillStudentTable();
