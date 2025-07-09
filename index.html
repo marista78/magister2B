@@ -29,11 +29,11 @@
                         <p>Estudiantes</p>
                     </div>
                     <div class="card">
-                        <h3>S/ 747</h3>
+                        <h3>S/ 852</h3>
                         <p>Total Recaudado</p>
                     </div>
                     <div class="card">
-                        <h3>2</h3>
+                        <h3>6</h3>
                         <p>Actividades</p>
                     </div>
                     <div class="card">
@@ -83,12 +83,50 @@
                                 <td class="amount">S/ 285.00</td>
                                 <td>19/21</td>
                             </tr>
+                            <tr>
+                                <td>Día del Maestro</td>
+                                <td class="amount">S/ 5.00</td>
+                                <td class="amount">S/ 105.00</td>
+                                <td>21/21</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <!-- Agregar el resumen dinámico aquí -->
                 <div id="summary"></div>
+            </div>
+
+            <!-- Estudiantes Tab -->
+            <div id="estudiantes" class="tab-content">
+                <h2 style="margin-bottom: 20px; color: #343a40;">👥 Detalle por Estudiante</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">N°</th>
+                                <th rowspan="2">Apellidos y Nombres</th>
+                                <th colspan="3" class="group-header madre">DÍA DE LA MADRE</th>
+                                <th colspan="4" class="group-header padre">DÍA DEL PADRE</th>
+                                <th colspan="2" class="group-header maestro">DÍA DEL MAESTRO</th>
+                                <th rowspan="2">Total Pagado</th>
+                            </tr>
+                            <tr>
+                                <th class="subheader">Canasta de la Madre</th>
+                                <th class="subheader">Regalo Día de la Madre Miss</th>
+                                <th class="subheader madre">Subtotal</th>
+                                <th class="subheader">Canasta del Padre</th>
+                                <th class="subheader">Confección de Aro</th>
+                                <th class="subheader">Actividad del Padre</th>
+                                <th class="subheader padre">Subtotal</th>
+                                <th class="subheader">Día del Maestro</th>
+                                <th class="subheader maestro">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody">
+                            <!-- Los datos se llenarán con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Gastos Tab -->
@@ -254,7 +292,7 @@
                     </div>
                     
                     <div class="summary-box">
-                         <div class="summary-item">
+                        <div class="summary-item">
                             <span>💰 SALDO ANTERIOR:</span>
                             <span class="amount">S/ 3.63</span>
                         </div>
@@ -268,68 +306,68 @@
                         </div>
                         <div class="summary-item balance">
                             <span>⚠️ SALDO TOTAL FINAL:</span>
-                            <span class="amount">S/ 1.23 </span>
+                            <span class="amount">S/ 1.23</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Confección de Aro -->
-<div class="expense-section">
-    <h3 class="expense-title">🧶 CONFECCIÓN DE ARO</h3>
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Descripción del Gasto</th>
-                    <th>N° de Boleta</th>
-                    <th>Cant.</th>
-                    <th>P.U (S/)</th>
-                    <th>Total (S/)</th>
-                    <th>Lugar de Compra</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>12/06/2025</td>
-                    <td>Materiales y mano de obra</td>
-                    <td></td>
-                    <td>1</td>
-                    <td class="amount">42.00</td>
-                    <td class="amount">42.00</td>
-                    <td>Mama de Brianna</td>
-                </tr>
-                <tr class="total-row">
-                    <td colspan="5"><strong>TOTAL GASTOS</strong></td>
-                    <td class="amount"><strong>42.00</strong></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="summary-box">
-         <div class="summary-item">
-            <span>💰 SALDO ANTERIOR:</span>
-            <span class="amount">S/ 1.23</span>
-        </div>
-        <div class="summary-item">
-            <span>💰 MONTO RECAUDADO:</span>
-            <span class="amount">S/ 63.00</span>
-        </div>
-        <div class="summary-item">
-            <span>💸 GASTO TOTAL:</span>
-            <span class="amount">S/ 42.00</span>
-        </div>
-        <div class="summary-item balance">
-            <span>💵 SALDO:</span>
-            <span class="amount">S/ 22.23</span>
-        </div>
-    </div>
-</div>
+                <div class="expense-section">
+                    <h3 class="expense-title">🧶 CONFECCIÓN DE ARO</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Descripción del Gasto</th>
+                                    <th>N° de Boleta</th>
+                                    <th>Cant.</th>
+                                    <th>P.U (S/)</th>
+                                    <th>Total (S/)</th>
+                                    <th>Lugar de Compra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12/06/2025</td>
+                                    <td>Materiales y mano de obra</td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td class="amount">42.00</td>
+                                    <td class="amount">42.00</td>
+                                    <td>Mama de Brianna</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="5"><strong>TOTAL GASTOS</strong></td>
+                                    <td class="amount"><strong>42.00</strong></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="summary-box">
+                        <div class="summary-item">
+                            <span>💰 SALDO ANTERIOR:</span>
+                            <span class="amount">S/ 1.23</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💰 MONTO RECAUDADO:</span>
+                            <span class="amount">S/ 63.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💸 GASTO TOTAL:</span>
+                            <span class="amount">S/ 42.00</span>
+                        </div>
+                        <div class="summary-item balance">
+                            <span>💵 SALDO:</span>
+                            <span class="amount">S/ 22.23</span>
+                        </div>
+                    </div>
+                </div>
 
-
-<div class="expense-section">
-                    <h3 class="expense-title">🧺 CANASTA DEL DIA DEl PADRE</h3>
+                <!-- Canasta Día del Padre -->
+                <div class="expense-section">
+                    <h3 class="expense-title">🧺 CANASTA DEL DIA DEL PADRE</h3>
                     <div class="table-container">
                         <table>
                             <thead>
@@ -349,8 +387,8 @@
                                     <td>BILLETERA</td>
                                     <td>B002-100119</td>
                                     <td>1</td>
-                                    <td class="amount">26.9</td>
-                                    <td class="amount">26.9</td>
+                                    <td class="amount">26.90</td>
+                                    <td class="amount">26.90</td>
                                     <td>ANDALY</td>
                                 </tr>
                                 <tr>
@@ -362,7 +400,7 @@
                                     <td class="amount">1.00</td>
                                     <td>OSCAR</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>12/06/2025</td>
                                     <td>BIRUTA</td>
                                     <td>NV-174</td>
@@ -371,7 +409,7 @@
                                     <td class="amount">2.00</td>
                                     <td>OSCAR</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>12/06/2025</td>
                                     <td>GLOBO BURBUJA</td>
                                     <td>NV-174</td>
@@ -380,7 +418,7 @@
                                     <td class="amount">2.00</td>
                                     <td>OSCAR</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>12/06/2025</td>
                                     <td>LETRERO</td>
                                     <td>NV-174</td>
@@ -389,7 +427,7 @@
                                     <td class="amount">3.00</td>
                                     <td>OSCAR</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>12/06/2025</td>
                                     <td>CAJA</td>
                                     <td>NV-174</td>
@@ -398,7 +436,7 @@
                                     <td class="amount">7.00</td>
                                     <td>OSCAR</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>12/06/2025</td>
                                     <td>PALITO</td>
                                     <td>NV-174</td>
@@ -434,7 +472,7 @@
                                     <td class="amount">11.90</td>
                                     <td>FARMADESA</td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>JABON-AFEITADOR</td>
                                     <td>B234-201179</td>
@@ -443,7 +481,7 @@
                                     <td class="amount">27.65</td>
                                     <td>BOTICAS PERU</td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>CAJA TRUPAL</td>
                                     <td>GR-9239</td>
@@ -452,7 +490,7 @@
                                     <td class="amount">8.00</td>
                                     <td>YAPE-404</td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>TAQUIS</td>
                                     <td>GR-153</td>
@@ -461,7 +499,7 @@
                                     <td class="amount">4.00</td>
                                     <td>LA TRANQUERA</td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>PIQUEO</td>
                                     <td>GR-153</td>
@@ -470,7 +508,7 @@
                                     <td class="amount">2.00</td>
                                     <td>LA TRANQUERA</td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>CERVEZA</td>
                                     <td>GR-153</td>
@@ -479,7 +517,7 @@
                                     <td class="amount">10.00</td>
                                     <td>LA TRANQUERA</td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>PAPEL SEDA</td>
                                     <td></td>
@@ -488,7 +526,7 @@
                                     <td class="amount">3.00</td>
                                     <td>YAPE-294</td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>CARTELES CHICOS</td>
                                     <td></td>
@@ -497,7 +535,7 @@
                                     <td class="amount">2.00</td>
                                     <td>YAPE-973</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>BOLSA, GLOBOS PENCIL</td>
                                     <td></td>
@@ -516,9 +554,9 @@
                     </div>
                     
                     <div class="summary-box">
-                         <div class="summary-item">
-                          <span>💰 SALDO ANTERIOR:</span>
-                          <span class="amount">S/ 22.23</span>
+                        <div class="summary-item">
+                            <span>💰 SALDO ANTERIOR:</span>
+                            <span class="amount">S/ 22.23</span>
                         </div>
                         <div class="summary-item">
                             <span>💰 MONTO RECAUDADO:</span>
@@ -535,12 +573,9 @@
                     </div>
                 </div>
 
-
-
-
-<!-- Actividad Día del Padre -->
-<div class="expense-section">
-                    <h3 class="expense-title">🧺 COMIDA DIA DEL PADRE</h3>
+                <!-- Actividad Día del Padre -->
+                <div class="expense-section">
+                    <h3 class="expense-title">🍽️ COMIDA DIA DEL PADRE</h3>
                     <div class="table-container">
                         <table>
                             <thead>
@@ -573,7 +608,7 @@
                                     <td class="amount">1.50</td>
                                     <td>YAPE-4715</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>TENEDORES</td>
                                     <td>GR-4970</td>
@@ -582,7 +617,7 @@
                                     <td class="amount">2.50</td>
                                     <td>YAPE-4715</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>ARROZ</td>
                                     <td></td>
@@ -591,7 +626,7 @@
                                     <td class="amount">28.80</td>
                                     <td>YAPE-591</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>NARANJA</td>
                                     <td></td>
@@ -600,7 +635,7 @@
                                     <td class="amount">3.00</td>
                                     <td>YAPE-743</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>POLLO</td>
                                     <td></td>
@@ -609,7 +644,7 @@
                                     <td class="amount">182.00</td>
                                     <td>YAPE-394</td>
                                 </tr>
-                                   <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>ADEREZO</td>
                                     <td></td>
@@ -645,7 +680,7 @@
                                     <td class="amount">11.00</td>
                                     <td>YAPE-746</td>
                                 </tr>
-                                 <tr>
+                                <tr>
                                     <td>13/06/2025</td>
                                     <td>MANTEQUILLA</td>
                                     <td></td>
@@ -654,7 +689,6 @@
                                     <td class="amount">2.50</td>
                                     <td></td>
                                 </tr>
-                                 
                                 <tr class="total-row">
                                     <td colspan="5"><strong>TOTAL GASTOS</strong></td>
                                     <td class="amount"><strong>283.50</strong></td>
@@ -665,9 +699,9 @@
                     </div>
                     
                     <div class="summary-box">
-                         <div class="summary-item">
-                          <span>💰 SALDO ANTERIOR:</span>
-                          <span class="amount">S/ 22.60</span>
+                        <div class="summary-item">
+                            <span>💰 SALDO ANTERIOR:</span>
+                            <span class="amount">S/ 22.60</span>
                         </div>
                         <div class="summary-item">
                             <span>💰 MONTO RECAUDADO:</span>
@@ -678,192 +712,259 @@
                             <span class="amount">S/ 283.50</span>
                         </div>
                         <div class="summary-item balance">
-                            <span>💵 SALDO TOTAL FINAL:</span>
+                            <span>💵 SALDO FINAL:</span>
                             <span class="amount">S/ 24.10</span>
                         </div>
                     </div>
                 </div>
 
-<!-- Nota informativa -->
+                <!-- Día del Maestro -->
+                <div class="expense-section">
+                    <h3 class="expense-title">👩‍🏫 DIA DEL MAESTRO</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Descripción del Gasto</th>
+                                    <th>N° de Boleta</th>
+                                    <th>Cant.</th>
+                                    <th>P.U (S/)</th>
+                                    <th>Total (S/)</th>
+                                    <th>Lugar de Compra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>03/07/2025</td>
+                                    <td>CARTERA - COREANO</td>
+                                    <td>TICKET-15741</td>
+                                    <td>1</td>
+                                    <td class="amount">75.00</td>
+                                    <td class="amount">75.00</td>
+                                    <td>ONE ILLUSION</td>
+                                </tr>
+                                <tr>
+                                    <td>03/07/2025</td>
+                                    <td>CREMA PARA CUERPO</td>
+                                    <td>BG01-00044</td>
+                                    <td>1</td>
+                                    <td class="amount">28.00</td>
+                                    <td class="amount">28.00</td>
+                                    <td>BRAVO DIAZ</td>
+                                </tr>
+                                <tr>
+                                    <td>04/07/2025</td>
+                                    <td>CIFRUS-PAPITAS</td>
+                                    <td>BE63-01167312</td>
+                                    <td>1</td>
+                                    <td class="amount">15.90</td>
+                                    <td class="amount">15.90</td>
+                                    <td>MASS</td>
+                                </tr>
+                                <tr>
+                                    <td>04/07/2025</td>
+                                    <td>FRUGOS</td>
+                                    <td>BE63-01167313</td>
+                                    <td>1</td>
+                                    <td class="amount">6.70</td>
+                                    <td class="amount">6.70</td>
+                                    <td>MASS</td>
+                                </tr>
+                                <tr class="total-row">
+                                    <td colspan="5"><strong>TOTAL GASTOS</strong></td>
+                                    <td class="amount"><strong>125.60</strong></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="summary-box">
+                        <div class="summary-item">
+                            <span>💰 SALDO ANTERIOR:</span>
+                            <span class="amount">S/ 24.10</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💰 MONTO RECAUDADO:</span>
+                            <span class="amount">S/ 105.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>💸 GASTO TOTAL:</span>
+                            <span class="amount">S/ 125.60</span>
+                        </div>
+                        <div class="summary-item balance">
+                            <span>💵 SALDO TOTAL FINAL:</span>
+                            <span class="amount">S/ 3.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nota informativa -->
                 <div class="info-note">
                     <h4>📝 Información Importante:</h4>
                     <p>• Los gastos están respaldados con boletas y vouchers correspondientes</p>
                     <p>• Todos los recibos están disponibles para revisión</p>
+                    <p>• El saldo final disponible es de S/ 3.50</p>
                 </div>
             </div>
 
-            <!-- Estudiantes Tab -->
-            <div id="estudiantes" class="tab-content">
-                <h2 style="margin-bottom: 20px; color: #343a40;">👥 Detalle por Estudiante</h2>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>N°</th>
-                                <th>Apellidos y Nombres</th>
-                                <th>Canasta Madre</th>
-                                <th>Regalo Miss</th>
-                                <th>Canasta Padre</th>
-                                <th>Aro</th>
-                                <th>Act. Padre</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody id="studentTableBody">
-                            <!-- Los datos se llenarán con JavaScript -->
-                        </tbody>
-                    </table>
+            <!-- Vouchers Tab -->
+            <div id="vouchers" class="tab-content">
+                <h2 style="margin-bottom: 30px; color: #343a40;">🧾 Vouchers y Comprobantes</h2>
+
+                <h3 class="expense-title">🧺 VOUCHERS - DIA DE LA MADRE</h3>
+                <div class="voucher-grid" id="voucherGrid">
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M1.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M2.jpg" alt="Descripción del Voucher 2" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M3.jpg" alt="Descripción del Voucher 3" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/M4.jpg" alt="Descripción del Voucher 4" class="voucher-image">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="expense-title">👨‍👦 VOUCHERS - DIA DEL PADRE</h3>
+                <div class="voucher-grid">
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/1.jpeg" alt="Descripción del Voucher P1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/2.jpeg" alt="Descripción del Voucher P2" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/3.jpeg" alt="Descripción del Voucher P3" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/5.jpeg" alt="Descripción del Voucher P4" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/6.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                         <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/7.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/8.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/9.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/10.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/11.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/12.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/13.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/14.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/15.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/16.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/17.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/18.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/19.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/20.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                        <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/21.jpeg" alt="Descripción del Voucher P5" class="voucher-image">
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="expense-title">👩‍🏫 VOUCHERS - DIA DEL MAESTRO</h3>
+                <div class="voucher-grid">
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/e1.jpeg" alt="Descripción del Voucher T1" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/e2.jpeg" alt="Descripción del Voucher T2" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/e3.jpeg" alt="Descripción del Voucher T3" class="voucher-image">
+                        </div>
+                    </div>
+                    <div class="voucher-item">
+                        <div class="voucher-image">
+                            <img src="/img/e4.jpeg" alt="Descripción del Voucher T4" class="voucher-image">
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- Vouchers Tab -->  
-         <div id="vouchers" class="tab-content">
-             <h3 class="expense-title">🧺 GASTOS DIA DE LA MADRE</h3>
-               <div class="voucher-grid" id="voucherGrid">
-                <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/M1.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/M2.jpg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/M3.jpg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/M4.jpg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/M5.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/M6.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/M7.jpg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                    <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/M8.jpg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-               </div>
-             <h3 class="expense-title">🧺 GASTOS DIA DEL PADRE</h3>
-            <div class="voucher-grid" id="voucherGrid">
-                    <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/1.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/2.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/3.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/5.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/6.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/7.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/8.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/9.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/10.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/11.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/12.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/13.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/14.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/15.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/16.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/17.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/18.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/19.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/20.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-                     <div class="voucher-item">
-                        <div class="voucher-image">
-                            <img src="img/21.jpeg" alt="Descripción del Voucher 1" class="voucher-image">
-                        </div>
-                    </div>
-           </div>
         </div>
     </div>
 
