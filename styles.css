@@ -121,6 +121,7 @@ body {
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
 table {
@@ -137,6 +138,40 @@ th {
     font-size: 0.9rem;
 }
 
+.group-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.group-header.madre {
+    background-color: #e91e63;
+}
+
+.group-header.padre {
+    background-color: #2196f3;
+}
+
+.group-header.maestro {
+    background-color: #ff9800;
+}
+
+.subheader {
+    background-color: #6c757d !important;
+    font-size: 0.8rem;
+}
+
+.subheader.madre {
+    background-color: #c2185b !important;
+}
+
+.subheader.padre {
+    background-color: #1976d2 !important;
+}
+
+.subheader.maestro {
+    background-color: #f57c00 !important;
+}
+
 td {
     padding: 12px;
     border-bottom: 1px solid #dee2e6;
@@ -149,6 +184,11 @@ tr:hover {
 .amount {
     font-weight: 600;
     color: #28a745;
+    text-align: right;
+}
+
+.student-name {
+    font-weight: 500;
 }
 
 .pending {
@@ -171,6 +211,7 @@ tr:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
+
 .voucher-item {
     background: white;
     border-radius: 15px;
@@ -193,6 +234,8 @@ tr:hover {
     justify-content: center;
     color: #6c757d;
     font-size: 1.1rem;
+    text-align: center;
+    padding: 20px;
 }
 
 .voucher-info {
@@ -291,30 +334,6 @@ tr:hover {
 .info-note p {
     margin-bottom: 8px;
     color: #495057;
-}
-
-.upload-section {
-    background: #f8f9fa;
-    border: 2px dashed #dee2e6;
-    border-radius: 15px;
-    padding: 40px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.upload-btn {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.upload-btn:hover {
-    background: #0056b3;
 }
 
 @media (max-width: 768px) {
