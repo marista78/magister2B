@@ -133,9 +133,23 @@ th {
     background: #343a40;
     color: white;
     padding: 15px 12px;
-    text-align: left;
+    text-align: center;
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+/* Alineación específica para headers de tablas */
+th:first-child {
+    text-align: center; /* Número/N° */
+}
+
+th:nth-child(2) {
+    text-align: left; /* Nombres/Apellidos */
+}
+
+/* Headers de actividades en tabla principal */
+table thead tr:first-child th:first-child {
+    text-align: left; /* "Actividad" */
 }
 
 .group-header {
@@ -158,6 +172,7 @@ th {
 .subheader {
     background-color: #6c757d !important;
     font-size: 0.8rem;
+    text-align: center;
 }
 
 .subheader.madre {
@@ -175,6 +190,54 @@ th {
 td {
     padding: 12px;
     border-bottom: 1px solid #dee2e6;
+    text-align: center; /* Centrado por defecto */
+}
+
+/* Alineación específica para celdas */
+td:first-child {
+    text-align: center; /* Números de orden */
+}
+
+td:nth-child(2) {
+    text-align: left; /* Nombres/Apellidos */
+}
+
+/* Para la tabla principal de actividades */
+#resumen table td:first-child {
+    text-align: left; /* Nombres de actividades */
+}
+
+#resumen table td:nth-child(2) {
+    text-align: center !important; /* Costo Individual */
+}
+
+#resumen table td:nth-child(3) {
+    text-align: center !important; /* Total Recaudado */
+}
+
+#resumen table td:last-child {
+    text-align: center; /* Participantes (ej: 21/21) */
+}
+
+/* Para tablas de gastos */
+.expense-section table td:nth-child(1) {
+    text-align: center; /* Fecha */
+}
+
+.expense-section table td:nth-child(2) {
+    text-align: left; /* Descripción del gasto */
+}
+
+.expense-section table td:nth-child(3) {
+    text-align: center; /* N° de boleta */
+}
+
+.expense-section table td:nth-child(4) {
+    text-align: center; /* Cantidad */
+}
+
+.expense-section table td:nth-child(7) {
+    text-align: left; /* Lugar de compra */
 }
 
 tr:hover {
@@ -184,11 +247,12 @@ tr:hover {
 .amount {
     font-weight: 600;
     color: #28a745;
-    text-align: right;
+    text-align: right !important; /* Siempre a la derecha para montos */
 }
 
 .student-name {
     font-weight: 500;
+    text-align: left !important; /* Siempre a la izquierda para nombres */
 }
 
 .pending {
