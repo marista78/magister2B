@@ -169,6 +169,15 @@ table thead tr:first-child th:first-child {
     background-color: #ff9800;
 }
 
+/* Nuevos grupos para actividades adicionales */
+.group-header.especial {
+    background-color: #9c27b0;
+}
+
+.group-header.aniversario {
+    background-color: #673ab7;
+}
+
 .subheader {
     background-color: #6c757d !important;
     font-size: 0.8rem;
@@ -185,6 +194,14 @@ table thead tr:first-child th:first-child {
 
 .subheader.maestro {
     background-color: #f57c00 !important;
+}
+
+.subheader.especial {
+    background-color: #7b1fa2 !important;
+}
+
+.subheader.aniversario {
+    background-color: #512da8 !important;
 }
 
 td {
@@ -400,6 +417,49 @@ tr:hover {
     color: #495057;
 }
 
+/* ESTILOS PARA EL BOTÓN DE SCROLL TO TOP - 35PX */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 107, 107, 0.9);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: rgba(255, 82, 82, 0.95);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+.scroll-to-top:active {
+    transform: translateY(0);
+}
+
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .header h1 {
         font-size: 2rem;
@@ -423,5 +483,23 @@ tr:hover {
     
     th, td {
         padding: 8px;
+    }
+
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
     }
 }
