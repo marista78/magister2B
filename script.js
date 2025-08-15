@@ -13,7 +13,7 @@ const ACTIVIDADES = [
     { id: 'diaMaestro', nombre: 'Día del Maestro', costo: 5, grupo: 'maestro' },
     
     // ¡PARA AGREGAR NUEVA ACTIVIDAD, SOLO AGREGA UNA LÍNEA AQUÍ! 🎉
-    //{ id: 'aniversario', nombre: 'Aniversario del Colegio', costo: 6, grupo: 'aniversario' }//
+    { id: 'aniversario', nombre: 'Aniversario del Colegio', costo: 5, grupo: 'aniversario' }
     // ¡Y listo! El resto se actualiza automáticamente
 ];
 
