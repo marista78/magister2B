@@ -13,7 +13,9 @@ const ACTIVIDADES = [
     { id: 'diaMaestro', nombre: 'Día del Maestro', costo: 5, grupo: 'maestro' },
     
     // ¡PARA AGREGAR NUEVA ACTIVIDAD, SOLO AGREGA UNA LÍNEA AQUÍ! 🎉
-    { id: 'aniversario', nombre: 'Aniversario del Colegio', costo: 5, grupo: 'aniversario' }
+    { id: 'ambientacion', nombre: 'Ambientación', costo: 5, grupo: 'aniversario' },
+    { id: 'escenografia', nombre: 'Escenografia', costo: 5, grupo: 'aniversario' },
+    { id: 'globo', nombre: 'Globos', costo: 2, grupo: 'aniversario' },
     // ¡Y listo! El resto se actualiza automáticamente
 ];
 
@@ -46,6 +48,10 @@ const ESTUDIANTES_BASE = [
 const EXCEPCIONES_PAGO = {
     "Bautista Hualpa Kate": { actPadre: 0 },  // No pagó actividad del padre
     "Paico Céspedes, Jésus": { actPadre: 0 }, // No pagó actividad del padre
+    "Mendoza Socualaya, Ezio Valentín": { escenografia: 0 }, // No pagó actividad escenbografia
+    "Bautista Hualpa Kate": { globo: 0 }, // No pagó actividad globos
+    "Chile Suyco, Julián Enrique": { globo: 0 }, // No pagó actividad globos
+    "Mendoza Socualaya, Ezio Valentín": { globo: 4 }, // No pagó actividad escenbografia
     
     // ¡AGREGAR EXCEPCIONES AQUÍ ES SÚPER FÁCIL!
     // "Nombre del Estudiante": { aniversario: 0 },  // Si alguien no paga el aniversario
