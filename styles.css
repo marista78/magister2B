@@ -116,12 +116,24 @@ body {
     opacity: 0.9;
 }
 
+/* ========================================
+   MODIFICACIÓN PRINCIPAL: TABLA CON STICKY HEADERS
+   ======================================== */
+
 .table-container {
     overflow-x: auto;
+    overflow-y: auto;
+    max-height: 600px; /* Altura máxima para activar scroll vertical */
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+    position: relative;
+}
+
+/* Solo para la tabla de estudiantes */
+#estudiantes .table-container {
+    max-height: 600px;
 }
 
 table {
@@ -136,6 +148,114 @@ th {
     text-align: center;
     font-weight: 600;
     font-size: 0.9rem;
+    /* NO aplicar position: sticky por defecto */
+}
+
+/* Primera fila de headers - sticky vertical */
+#estudiantes table thead tr:first-child th {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    padding: 15px 12px;
+}
+
+/* Segunda fila de headers - sticky vertical */
+#estudiantes table thead tr:nth-child(2) th {
+    position: sticky;
+    top: 70px;
+    z-index: 15;
+    padding: 15px 12px;
+}
+
+/* Ajustar ancho de columnas específicas */
+#estudiantes table thead tr:nth-child(2) th:nth-child(3) {
+    width: 85px !important;
+    max-width: 85px !important;
+    padding: 10px 6px !important;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+#estudiantes table tbody td:nth-child(3) {
+    width: 85px !important;
+    max-width: 85px !important;
+    padding: 10px 6px;
+}
+
+#estudiantes table thead tr:nth-child(2) th:nth-child(4) {
+    width: 85px !important;
+    max-width: 85px !important;
+    padding: 10px 6px !important;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+#estudiantes table tbody td:nth-child(4) {
+    width: 85px !important;
+    max-width: 85px !important;
+    padding: 10px 6px;
+}
+
+/* Aplicar ancho uniforme a todas las columnas de montos - ELIMINADO */
+
+/* SOLO primera columna (N°) - sticky horizontal también */
+#estudiantes table th:first-child,
+#estudiantes table td:first-child {
+    position: sticky !important;
+    left: 0 !important;
+    z-index: 15;
+    min-width: 60px;
+    width: 60px;
+}
+
+/* SOLO segunda columna (Apellidos y Nombres) - sticky horizontal también */  
+#estudiantes table th:nth-child(2),
+#estudiantes table td:nth-child(2) {
+    position: sticky !important;
+    left: 60px !important;
+    z-index: 15;
+    min-width: 200px;
+    width: 200px;
+}
+
+/* Z-index mayor para la intersección de sticky vertical + horizontal */
+#estudiantes table thead tr:first-child th:first-child,
+#estudiantes table thead tr:first-child th:nth-child(2) {
+    z-index: 40;
+}
+
+#estudiantes table thead tr:nth-child(2) th:first-child,
+#estudiantes table thead tr:nth-child(2) th:nth-child(2) {
+    z-index: 35;
+}
+
+/* Headers de estas columnas con fondo oscuro */
+#estudiantes table thead th:first-child,
+#estudiantes table thead th:nth-child(2) {
+    background: #343a40;
+    color: white;
+}
+
+/* Celdas de datos con fondo blanco */
+#estudiantes table tbody td:first-child,
+#estudiantes table tbody td:nth-child(2) {
+    background: white;
+    color: #212529;
+}
+
+/* Intersección de headers fijos (esquina superior izquierda) */
+#estudiantes table thead tr:first-child th:first-child,
+#estudiantes table thead tr:first-child th:nth-child(2) {
+    z-index: 40;
+    background: #343a40;
+}
+
+#estudiantes table thead tr:nth-child(2) th:first-child,
+#estudiantes table thead tr:nth-child(2) th:nth-child(2) {
+    z-index: 35;
+    background: #6c757d;
 }
 
 /* Alineación específica para headers de tablas */
@@ -491,6 +611,16 @@ tr:hover {
         width: 32px;
         height: 32px;
         font-size: 14px;
+    }
+    
+    /* Ajustar sticky headers en móvil */
+    #estudiantes table thead tr:nth-child(2) th {
+        top: 38px;
+    }
+    
+    #estudiantes table th:nth-child(2),
+    #estudiantes table td:nth-child(2) {
+        left: 40px;
     }
 }
 
