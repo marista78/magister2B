@@ -5,8 +5,8 @@
 
 // PASO 1: Definir todas las actividades (FÁCIL DE MODIFICAR)
 const ACTIVIDADES = [
-    { id: 'canastaMadre', nombre: 'Canasta de la Madre', costo: 7, grupo: 'madre' },
-    { id: 'regaloMiss', nombre: 'Regalo Día de la Madre Miss', costo: 5, grupo: 'madre' },
+    { id: 'canastaMadre', nombre: 'Canasta Madre', costo: 7, grupo: 'madre' },
+    { id: 'regaloMiss', nombre: 'Regalo Miss', costo: 5, grupo: 'madre' },
     { id: 'canastaPadre', nombre: 'Canasta del Padre', costo: 7, grupo: 'padre' },
     { id: 'aro', nombre: 'Confección de Aro', costo: 3, grupo: 'padre' },
     { id: 'actPadre', nombre: 'Actividad del Padre', costo: 15, grupo: 'padre' },
@@ -15,7 +15,10 @@ const ACTIVIDADES = [
     // ¡PARA AGREGAR NUEVA ACTIVIDAD, SOLO AGREGA UNA LÍNEA AQUÍ! 🎉
     { id: 'ambientacion', nombre: 'Ambientación', costo: 5, grupo: 'aniversario' },
     { id: 'escenografia', nombre: 'Escenografia', costo: 5, grupo: 'aniversario' },
-    { id: 'globo', nombre: 'Globos', costo: 2, grupo: 'aniversario' },
+    { id: 'globos', nombre: 'Globos', costo: 2, grupo: 'aniversario' },
+    { id: 'cumple', nombre: 'Cumple Miss', costo: 0, grupo: 'cumplemiss' },
+    { id: 'uniformes', nombre: 'Uniformes', costo: 45.5, grupo: 'olimpiadas' },
+    { id: 'arreglos', nombre: 'Arreglos', costo: 15, grupo: 'olimpiadas' },
     // ¡Y listo! El resto se actualiza automáticamente
 ];
 
@@ -46,13 +49,25 @@ const ESTUDIANTES_BASE = [
 
 // PASO 3: ¡SOLO EXCEPCIONES! (estudiantes que pagan diferente)
 const EXCEPCIONES_PAGO = {
-    "Bautista Hualpa Kate": { actPadre: 0 },  // No pagó actividad del padre
-    "Paico Céspedes, Jésus": { actPadre: 0 }, // No pagó actividad del padre
-    "Mendoza Socualaya, Ezio Valentín": { escenografia: 0 }, // No pagó actividad escenbografia
-    "Bautista Hualpa Kate": { globo: 0 }, // No pagó actividad globos
-    "Chile Suyco, Julián Enrique": { globo: 0 }, // No pagó actividad globos
-    "Mendoza Socualaya, Ezio Valentín": { globo: 4 }, // No pagó actividad escenbografia
-    
+  "Arista Atauchi, Jose Andre": {cumple: 10},  
+  "Bautista Hualpa Kate": { actPadre: 0, globos: 0, uniformes: 55.5 },
+  "Borjas Medina, Dereck": {cumple: 10},
+  "Cajacuri Cardenas, Arlett": { uniformes: 55.5, cumple: 10 },
+  "Carita Chuquihuanga, Valeria": { uniformes: 55.5, cumple: 8 },
+  "Chile Suyco, Julián Enrique": { globos: 0, cumple: 10 },
+  "Fernández Alcantara, Fernando": {cumple: 10},
+  "Isique Vilcahuamán, Ana Dayanne": { uniformes: 55.5, cumple: 10 },
+  "Juárez Mondragón, Mia Shirley": { uniformes: 55.5, cumple: 10},
+  "Mendoza Socualaya, Ezio Valentín": { escenografia: 0, globos: 4 },
+  "Paico Céspedes, Jésus": { actPadre: 0, cumple: 8 },
+  "Pedroza Muñoz, Rafaela Valentina": { uniformes: 55.5, cumple: 8 },
+  "Ramos Valdivia, Brianna": { uniformes: 56.00, cumple: 8 },
+  "Rivas Ramos Yamila Isel": { uniformes: 55.50, cumple: 8 },
+  "Sahuanay Moreno, Dayana": { uniformes: 55.5, cumple: 10 },
+  "Tapia Panebra, Renato": {cumple: 10},
+  "Tejada Castillo, Emily": { uniformes: 56.00, cumple: 10 },
+  "Ycarrayme Rimarachin, Mikaela": { uniformes: 56.00, cumple: 10 }
+
     // ¡AGREGAR EXCEPCIONES AQUÍ ES SÚPER FÁCIL!
     // "Nombre del Estudiante": { aniversario: 0 },  // Si alguien no paga el aniversario
     // "Otro Estudiante": { aniversario: 6 },        // Si alguien paga menos
@@ -118,7 +133,7 @@ function actualizarResumenSuperior() {
         
         if (cards.length >= 4) {
             cards[0].textContent = estudiantes.length; // Estudiantes
-            cards[1].textContent = `S/ ${totalRecaudado.toFixed(0)}`; // Total Recaudado
+            cards[1].textContent = `S/ ${totalRecaudado.toFixed(2)}`; // Total Recaudado
             cards[2].textContent = categoriasUnicas; // CATEGORÍAS (no actividades individuales)
             // Participación se mantiene igual
             console.log('✅ Cards actualizadas correctamente');
@@ -203,7 +218,9 @@ function generarHeadersTablaEstudiantes() {
             padre: 'DÍA DEL PADRE', 
             maestro: 'DÍA DEL MAESTRO',
             aniversario: 'ANIVERSARIO',
-            especial: 'ACTIVIDADES ESPECIALES'
+            especial: 'ACTIVIDADES ESPECIALES',
+            olimpiadas: 'OLIMPIADAS',
+            cumplemiss: 'CUMPLE MISS'
         };
         
         // Colores de grupos
@@ -212,7 +229,9 @@ function generarHeadersTablaEstudiantes() {
             padre: 'padre',
             maestro: 'maestro', 
             aniversario: 'aniversario',
-            especial: 'especial'
+            especial: 'especial',
+            olimpiadas: 'especial',  
+            cumplemiss: 'miss'
         };
         
         // Generar header principal
