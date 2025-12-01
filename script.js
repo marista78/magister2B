@@ -11,6 +11,7 @@ const ACTIVIDADES = [
     { id: 'aro', nombre: 'Confección de Aro', costo: 3, grupo: 'padre' },
     { id: 'actPadre', nombre: 'Actividad del Padre', costo: 15, grupo: 'padre' },
     { id: 'diaMaestro', nombre: 'Día del Maestro', costo: 5, grupo: 'maestro' },
+    { id: 'actFetidanza', nombre: 'Festidanza', costo: 5, grupo: 'festidanza' },
     
     // ¡PARA AGREGAR NUEVA ACTIVIDAD, SOLO AGREGA UNA LÍNEA AQUÍ! 🎉
     { id: 'ambientacion', nombre: 'Ambientación', costo: 5, grupo: 'aniversario' },
